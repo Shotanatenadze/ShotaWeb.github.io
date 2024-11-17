@@ -1,7 +1,6 @@
-// Check for saved theme preference, always default to light
+// Always default to light theme
 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-const storedTheme = localStorage.getItem('theme');
-const theme = storedTheme || 'light';
+const theme = 'light';
 
 // Apply theme on load
 document.documentElement.setAttribute('data-theme', theme);
