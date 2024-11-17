@@ -1,11 +1,8 @@
-// Always default to light theme
-const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-const theme = 'light';
+// Get the saved theme (matches the early script)
+const savedTheme = localStorage.getItem('theme') || 'light';
 
-// Apply theme on load
-document.documentElement.setAttribute('data-theme', theme);
 // Update toggle button state
-updateToggleButton(theme);
+updateToggleButton(savedTheme);
 
 // Theme toggle functionality
 document.getElementById('themeToggle').addEventListener('click', () => {
